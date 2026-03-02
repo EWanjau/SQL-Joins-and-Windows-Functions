@@ -1,9 +1,7 @@
----
 ## SQL Joins and Window Functions
 
 When retrieving data from a database, there are specific conditions or criteria you may want to use to analyze that data. You might need to perform calculations, filter out relevant information, group data for specific analysis, or display aggregated results. SQL allows you to perform these operations on single or multiple tables by use of built-in functions. This article focuses on Joins and Window Functions.
 
----
 
 ### JOINS
 
@@ -78,7 +76,6 @@ gives us these results: RA, RB, RC, YA, YB, YC, GA, GB, GC.
 
 ![cross-join-venn-diagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c3g0e7usqv3v9s314dp7.png)
 
----
 
 ### Window Functions
 
