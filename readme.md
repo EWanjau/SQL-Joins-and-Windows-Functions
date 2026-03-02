@@ -1,6 +1,5 @@
 ---
 ## SQL Joins and Window Functions
----
 
 When retrieving data from a database, there are specific conditions or criteria you may want to use to analyze that data. You might need to perform calculations, filter out relevant information, group data for specific analysis, or display aggregated results. SQL allows you to perform these operations on single or multiple tables by use of built-in functions. This article focuses on Joins and Window Functions.
 
@@ -14,7 +13,6 @@ For instance, if you have data in a students table with the fields: name, studen
 
 Different types of joins can be used in SQL, namely:
 
----
 
 **Inner Join:** This retrieves data from the database that matches from the two tables and ignores the records that don’t appear in both tables. Given our tables, a sample inner join script would be:
 
@@ -29,7 +27,6 @@ The result of this query will be all the students who have paid the fee.
 
 ![inner-join-venn-diagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0aj35rxbauz7nfjkpgp0.png)
 
----
 
 **Left Join:** This retrieves all records that appear on the left table with matching records on the right; if a record appears on the left and not the right, the missing data is replaced with NULL values in the right table. It is important to note that the **order** of the tables matters when writing the script.
 
@@ -46,13 +43,11 @@ This retrieves all student names and their corresponding fee payments made; if a
 
 ![left-join-venn-diagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tyf3719q02ilei4mjc4x.png)
 
----
 
 **Right Join:** It works in a similar way as the Left Join, with the difference being the order of the tables. The results retrieved are from the right table with matching fields on the left and null values for non-matching rows on the left. Sometimes, the use of a right join can be negated by switching the order of the tables and using a Left Join instead.
 
 ![right-join-venndiagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rcw5fsigyvzf3yx6zvu6.png)
 
----
 
 **Full Join:** This join retrieves all records from both tables and fills the unmatched data with nulls from both tables. It returns all records from the two tables and comes in handy when you are inspecting tables for NULL values. In our example:
 
@@ -67,7 +62,6 @@ Returns all records from students and the fee table, and NULL values for missing
 
 ![full-join-venn-diagram](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ub605u940d6ddb7q140r.png)
 
----
 
 **Cross Join:** This type of join matches data from both tables in combinations. For instance, if you have table A with the fields: R, Y, G and another table with A, B, C, the result will be a combination of all the fields in the first table and the second.
 
@@ -102,7 +96,6 @@ This results in a table with collapsed rows and only one row to represent the gr
 
 ![table-with-aggregation-group-by](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wnzkq8t4aq93t7l2wisw.png)
 
----
 
 A window function would look like this:
 
@@ -115,7 +108,6 @@ The window function does not collapse the grouped data; it aggregates the sum an
 
 ![table-with-window-function-aggregation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9pm6ur6o464zbmub8stt.png)
 
----
 
 The syntax of a window function, therefore, is:
 
@@ -125,7 +117,6 @@ The syntax of a window function, therefore, is:
 
 The ***OVER*** keyword identifies the window over which you want to apply the function. A window is a subset of your data.
 
----
 
 #### Functions
 
